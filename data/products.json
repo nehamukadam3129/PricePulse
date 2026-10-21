@@ -1,0 +1,123 @@
+
+[
+  {
+    "id": 1,
+    "name": "Apple iPhone 11",
+    "brand": "Apple",
+    "model": "iPhone 11",
+    "category": "Mobiles",
+    "variant": "64GB",
+    "image": "📱",
+    "description": "Apple iPhone 11 smartphone, 64GB storage",
+    "prices": [
+      {"platform": "Amazon", "price": 19999, "availability": "Sample offer"},
+      {"platform": "Flipkart", "price": 18999, "availability": "Sample offer"},
+      {"platform": "Croma", "price": 19499, "availability": "Sample offer"}
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Apple iPhone 12",
+    "brand": "Apple",
+    "model": "iPhone 12",
+    "category": "Mobiles",
+    "variant": "64GB",
+    "image": "📱",
+    "description": "Apple iPhone 12 smartphone, 64GB storage",
+    "prices": [
+      {"platform": "Amazon", "price": 24999, "availability": "Sample offer"},
+      {"platform": "Flipkart", "price": 23999, "availability": "Sample offer"},
+      {"platform": "Croma", "price": 24499, "availability": "Sample offer"}
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Apple iPhone 13",
+    "brand": "Apple",
+    "model": "iPhone 13",
+    "category": "Mobiles",
+    "variant": "128GB",
+    "image": "📱",
+    "description": "Apple iPhone 13 smartphone, 128GB storage",
+    "prices": [
+      {"platform": "Amazon", "price": 32999, "availability": "Sample offer"},
+      {"platform": "Flipkart", "price": 31999, "availability": "Sample offer"},
+      {"platform": "Croma", "price": 32499, "availability": "Sample offer"}
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Apple iPhone 14",
+    "brand": "Apple",
+    "model": "iPhone 14",
+    "category": "Mobiles",
+    "variant": "128GB",
+    "image": "📱",
+    "description": "Apple iPhone 14 smartphone, 128GB storage",
+    "prices": [
+      {"platform": "Amazon", "price": 39999, "availability": "Sample offer"},
+      {"platform": "Flipkart", "price": 38999, "availability": "Sample offer"},
+      {"platform": "Croma", "price": 39499, "availability": "Sample offer"}
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Apple iPhone 15",
+    "brand": "Apple",
+    "model": "iPhone 15",
+    "category": "Mobiles",
+    "variant": "128GB",
+    "image": "📱",
+    "description": "Apple iPhone 15 smartphone, 128GB storage",
+    "prices": [
+      {"platform": "Amazon", "price": 69999, "availability": "Sample offer"},
+      {"platform": "Flipkart", "price": 67999, "availability": "Sample offer"},
+      {"platform": "Croma", "price": 68999, "availability": "Sample offer"}
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Samsung Galaxy S24",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "category": "Mobiles",
+    "variant": "128GB",
+    "image": "📱",
+    "description": "Samsung Galaxy S24 smartphone, 128GB storage",
+    "prices": [
+      {"platform": "Amazon", "price": 74999, "availability": "Sample offer"},
+      {"platform": "Flipkart", "price": 72999, "availability": "Sample offer"},
+      {"platform": "Croma", "price": 73999, "availability": "Sample offer"}
+    ]
+  },
+  {
+    "id": 7,
+    "name": "boAt Rockerz 450 Headphones",
+    "brand": "boAt",
+    "model": "Rockerz 450",
+    "category": "Headphones",
+    "variant": "Standard",
+    "image": "🎧",
+    "description": "Wireless Bluetooth headphones with long battery life",
+    "prices": [
+      {"platform": "Amazon", "price": 1599, "availability": "Sample offer"},
+      {"platform": "Flipkart", "price": 1399, "availability": "Sample offer"},
+      {"platform": "Croma", "price": 1549, "availability": "Sample offer"}
+    ]
+  },
+  {
+    "id": 8,
+    "name": "HP Pavilion 15 Laptop",
+    "brand": "HP",
+    "model": "Pavilion 15",
+    "category": "Laptops",
+    "variant": "Standard",
+    "image": "💻",
+    "description": "HP Pavilion 15 laptop",
+    "prices": [
+      {"platform": "Amazon", "price": 64999, "availability": "Sample offer"},
+      {"platform": "Flipkart", "price": 62999, "availability": "Sample offer"},
+      {"platform": "Croma", "price": 63999, "availability": "Sample offer"}
+    ]
+  }
+]

@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | PricePulse</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body data-page="categories">
+
+<header class="navbar">
+    <a class="brand" href="/">
+        <span class="brand-mark">P</span>
+        Price<span class="brand-accent">Pulse</span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/compare">Compare Prices</a>
+        <a class="active" href="/categories">Categories</a>
+        <a href="/tracking">Price Tracking</a>
+        <a href="/about">About</a>
+    </nav>
+
+    <a class="nav-cta" href="/compare">Start Comparing ↗</a>
+</header>
+
+<main class="page-container">
+
+    <section class="page-heading">
+        <span class="section-kicker">EXPLORE THE CATALOGUE</span>
+        <h1>Shop by <span>Category</span></h1>
+        <p>
+            Browse different product categories and compare available prices
+            before making your choice.
+        </p>
+    </section>
+
+    <section class="category-intro">
+        <div>
+            <h2>What are you looking for?</h2>
+            <p>Select a category to explore matching products.</p>
+        </div>
+
+        <form id="categorySearchForm" class="search-box category-search">
+            <input
+                type="search"
+                id="categorySearchInput"
+                placeholder="Search a category..."
+                aria-label="Search categories"
+            >
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section class="all-categories">
+
+        <a class="category-card cat-blue category-item"
+           href="/compare?category=Mobiles"
+           data-category-name="mobiles smartphones">
+            <span class="cat-icon">▯</span>
+            <strong>Mobiles</strong>
+            <small>Smartphones and mobile devices</small>
+            <span class="category-action">Explore category →</span>
+        </a>
+
+        <a class="category-card cat-green category-item"
+           href="/compare?category=Laptops"
+           data-category-name="laptops computers notebooks">
+            <span class="cat-icon">▱</span>
+            <strong>Laptops</strong>
+            <small>Everyday, professional and gaming laptops</small>
+            <span class="category-action">Explore category →</span>
+        </a>
+
+        <a class="category-card cat-pink category-item"
+           href="/compare?category=Headphones"
+           data-category-name="headphones earphones audio">
+            <span class="cat-icon">♫</span>
+            <strong>Headphones</strong>
+            <small>Headphones, earbuds and audio products</small>
+            <span class="category-action">Explore category →</span>
+        </a>
+
+        <a class="category-card cat-orange category-item"
+           href="/compare?category=TV"
+           data-category-name="tv televisions smart tv">
+            <span class="cat-icon">▣</span>
+            <strong>Televisions</strong>
+            <small>Explore TVs and home entertainment</small>
+            <span class="category-action">Explore category →</span>
+        </a>
+
+        <a class="category-card cat-purple category-item"
+           href="/compare?category=Clothing"
+           data-category-name="clothing fashion clothes">
+            <span class="cat-icon">◇</span>
+            <strong>Clothing</strong>
+            <small>Fashion and everyday wear</small>
+            <span class="category-action">Explore category →</span>
+        </a>
+
+        <a class="category-card cat-teal category-item"
+           href="/compare?category=Home"
+           data-category-name="home living furniture">
+            <span class="cat-icon">⌂</span>
+            <strong>Home & Living</strong>
+            <small>Useful products for your home</small>
+            <span class="category-action">Explore category →</span>
+        </a>
+
+        <a class="category-card cat-yellow category-item"
+           href="/compare?category=Camera"
+           data-category-name="camera photography">
+            <span class="cat-icon">◎</span>
+            <strong>Cameras</strong>
+            <small>Photography and camera equipment</small>
+            <span class="category-action">Explore category →</span>
+        </a>
+
+        <a class="category-card cat-blue category-item"
+           href="/compare?category=Accessories"
+           data-category-name="accessories gadgets">
+            <span class="cat-icon">✧</span>
+            <strong>Accessories</strong>
+            <small>Extra essentials for your devices</small>
+            <span class="category-action">Explore category →</span>
+        </a>
+
+    </section>
+
+    <p id="noCategoriesMessage" class="empty-state" hidden>
+        No matching categories found. Try another search.
+    </p>
+
+    <section class="category-cta">
+        <div>
+            <span class="section-kicker">MAKE A SMARTER CHOICE</span>
+            <h2>Found your category?</h2>
+            <p>Search the catalogue and compare the available product prices.</p>
+        </div>
+        <a class="primary-btn" href="/compare">Compare Prices →</a>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <a class="brand" href="/">
+        <span class="brand-mark">P</span>
+        Price<span class="brand-accent">Pulse</span>
+    </a>
+
+    <p>Compare smarter. Choose better.</p>
+
+    <div class="footer-bottom">
+        <span>© 2026 PricePulse</span>
+        <div>
+            <a href="/">Home</a>
+            <a href="/compare">Compare</a>
+            <a href="/tracking">Price Tracking</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const categoryForm = document.getElementById("categorySearchForm");
+    const categoryInput = document.getElementById("categorySearchInput");
+    const categoryCards = document.querySelectorAll(".category-item");
+    const noCategories = document.getElementById("noCategoriesMessage");
+
+    function filterCategories() {
+        const query = categoryInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        categoryCards.forEach(card => {
+            const name = card.dataset.categoryName.toLowerCase();
+            const matches = name.includes(query);
+
+            card.hidden = !matches;
+
+            if (matches) {
+                visibleCount++;
+            }
+        });
+
+        noCategories.hidden = visibleCount !== 0;
+    }
+
+    categoryForm.addEventListener("submit", event => {
+        event.preventDefault();
+        filterCategories();
+    });
+
+    categoryInput.addEventListener("input", filterCategories);
+</script>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

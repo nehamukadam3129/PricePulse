@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | PricePulse</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-page="home">
+
+<header class="navbar">
+    <a class="brand" href="/">
+        <span class="brand-mark">P</span>
+        Price<span class="brand-accent">Pulse</span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/compare">Compare Prices</a>
+        <a href="/categories">Categories</a>
+        <a href="/tracking">Price Tracking</a>
+        <a href="/about">About</a>
+    </nav>
+
+    <a class="nav-cta" href="/compare">Start Comparing ↗</a>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-copy">
+            <span class="section-kicker">
+                SMART SHOPPING · BETTER CHOICES
+            </span>
+
+            <h1>
+                Find the best price.<br>
+                <span>Save more.</span>
+            </h1>
+
+            <p>
+                Search products, compare listed prices,
+                and choose the option that works for you.
+            </p>
+
+            <form class="search-box" id="searchForm">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search iPhone, Samsung, headphones..."
+                    aria-label="Search products"
+                >
+                <button type="submit">Search →</button>
+            </form>
+
+            <div class="popular-searches">
+                <span>Popular:</span>
+                <button type="button" data-search="iPhone">iPhone</button>
+                <button type="button" data-search="Samsung">Samsung</button>
+                <button type="button" data-search="Headphones">
+                    Headphones
+                </button>
+            </div>
+
+            <div id="homeSearchResults"></div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="phone-art">
+                <div class="phone-camera">
+                    <i></i><i></i><i></i>
+                </div>
+                <div class="phone-screen">
+                    <span>PRICEPULSE</span>
+                    <h2>Compare.</h2>
+                    <h2>Choose.</h2>
+                    <h2>Save.</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrap">
+        <div class="section-title-row">
+            <div>
+                <span class="section-kicker">EXPLORE PRODUCTS</span>
+                <h2>Shop by category</h2>
+                <p>Choose a category to find matching products.</p>
+            </div>
+            <a class="text-link" href="/categories">All categories ↗</a>
+        </div>
+
+        <div class="category-grid">
+            <a class="category-card cat-blue"
+               href="/compare?category=Mobiles">
+                <span class="cat-icon">▯</span>
+                <strong>Mobiles</strong>
+                <small>Smartphones and more</small>
+            </a>
+
+            <a class="category-card cat-green"
+               href="/compare?category=Laptops">
+                <span class="cat-icon">▱</span>
+                <strong>Laptops</strong>
+                <small>Work and gaming</small>
+            </a>
+
+            <a class="category-card cat-pink"
+               href="/compare?category=Headphones">
+                <span class="cat-icon">♫</span>
+                <strong>Headphones</strong>
+                <small>Audio essentials</small>
+            </a>
+
+            <a class="category-card cat-orange"
+               href="/compare?category=TV">
+                <span class="cat-icon">▣</span>
+                <strong>Televisions</strong>
+                <small>Upgrade your screen</small>
+            </a>
+        </div>
+    </section>
+
+    <section class="section-wrap how-section">
+        <div class="center-heading">
+            <span class="section-kicker">THREE SIMPLE STEPS</span>
+            <h2>How PricePulse works</h2>
+            <p>Less searching. Easier comparisons.</p>
+        </div>
+
+        <div class="steps-grid">
+            <article class="step-card">
+                <span class="step-no">01</span>
+                <h3>Search a product</h3>
+                <p>Enter a product name or browse categories.</p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-no">02</span>
+                <h3>Compare options</h3>
+                <p>Review available listed prices and details.</p>
+            </article>
+
+            <article class="step-card">
+                <span class="step-no">03</span>
+                <h3>Choose confidently</h3>
+                <p>Use the catalogue to make an informed choice.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="brand" href="/">
+        <span class="brand-mark">P</span>
+        Price<span class="brand-accent">Pulse</span>
+    </a>
+    <p>Compare smarter. Choose better.</p>
+    <div class="footer-bottom">
+        <span>© 2026 PricePulse</span>
+        <div>
+            <a href="/">Home</a>
+            <a href="/compare">Compare</a>
+            <a href="/categories">Categories</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

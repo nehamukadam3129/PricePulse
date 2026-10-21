@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Prices | PricePulse</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body data-page="compare">
+
+<header class="navbar">
+    <a class="brand" href="/">
+        <span class="brand-mark">P</span>
+        Price<span class="brand-accent">Pulse</span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="/">Home</a>
+        <a class="active" href="/compare">Compare Prices</a>
+        <a href="/categories">Categories</a>
+        <a href="/tracking">Price Tracking</a>
+        <a href="/about">About</a>
+    </nav>
+
+    <a class="nav-cta" href="/categories">Explore Products ↗</a>
+</header>
+
+<main class="page-container">
+
+    <section class="page-heading">
+        <span class="section-kicker">SMART SHOPPING STARTS HERE</span>
+        <h1>Compare <span>Prices</span></h1>
+        <p>Find your product and compare available prices in one place.</p>
+    </section>
+
+    <section class="compare-search">
+        <form id="compareSearchForm" class="search-box">
+            <input
+                type="search"
+                id="compareSearchInput"
+                placeholder="Search iPhone, laptop, headphones..."
+                aria-label="Search products"
+            >
+            <button type="submit">Search →</button>
+        </form>
+    </section>
+
+    <div class="compare-layout">
+
+        <aside class="filter-panel">
+            <div class="filter-heading">
+                <h2>Filters</h2>
+                <button type="button" id="resetFilters" class="text-link">
+                    Reset
+                </button>
+            </div>
+
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter">
+                <option value="">All categories</option>
+                <option value="Mobiles">Mobiles</option>
+                <option value="Laptops">Laptops</option>
+                <option value="Headphones">Headphones</option>
+                <option value="TV">Televisions</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Home">Home & Living</option>
+                <option value="Camera">Cameras</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+
+            <label for="brandFilter">Brand</label>
+            <input
+                type="text"
+                id="brandFilter"
+                placeholder="e.g. Apple, Samsung"
+            >
+
+            <label for="maxPriceFilter">Maximum price (₹)</label>
+            <input
+                type="number"
+                id="maxPriceFilter"
+                min="0"
+                placeholder="e.g. 50000"
+            >
+
+            <label for="ratingFilter">Minimum rating</label>
+            <select id="ratingFilter">
+                <option value="0">All ratings</option>
+                <option value="3">3+ stars</option>
+                <option value="4">4+ stars</option>
+                <option value="4.5">4.5+ stars</option>
+            </select>
+
+            <button type="button" id="applyFilters" class="primary-btn">
+                Apply Filters
+            </button>
+
+            <p class="filter-note">
+                Filters depend on the details available in the product catalogue.
+            </p>
+        </aside>
+
+        <section class="results-panel">
+            <div class="results-toolbar">
+                <div>
+                    <h2>Products</h2>
+                    <p id="resultsCount">Search the catalogue to begin.</p>
+                </div>
+
+                <select id="sortFilter" aria-label="Sort products">
+                    <option value="lowest">Lowest price first</option>
+                    <option value="highest">Highest price first</option>
+                    <option value="rating">Highest rating first</option>
+                </select>
+            </div>
+
+            <div id="compareResults" class="product-grid">
+                <div class="empty-state">
+                    <span class="empty-icon">⌕</span>
+                    <h3>Ready to compare?</h3>
+                    <p>Search for a product to see matching catalogue items.</p>
+                </div>
+            </div>
+
+            <section class="comparison-panel">
+                <div class="section-title-row">
+                    <div>
+                        <span class="section-kicker">YOUR SHORTLIST</span>
+                        <h2>Product comparison</h2>
+                    </div>
+                </div>
+
+                <p id="comparisonMessage">
+                    Add products using the Compare button to build your shortlist.
+                </p>
+
+                <div id="comparisonResults"></div>
+            </section>
+        </section>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <a class="brand" href="/">
+        <span class="brand-mark">P</span>
+        Price<span class="brand-accent">Pulse</span>
+    </a>
+    <p>Compare smarter. Choose better.</p>
+    <div class="footer-bottom">
+        <span>© 2026 PricePulse</span>
+        <div>
+            <a href="/">Home</a>
+            <a href="/categories">Categories</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
