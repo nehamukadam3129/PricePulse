@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Tracking | PricePulse</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body data-page="tracking">
+
+<header class="navbar">
+    <a class="brand" href="/">
+        <span class="brand-mark">P</span>
+        Price<span class="brand-accent">Pulse</span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/compare">Compare Prices</a>
+        <a href="/categories">Categories</a>
+        <a class="active" href="/tracking">Price Tracking</a>
+        <a href="/about">About</a>
+    </nav>
+
+    <a class="nav-cta" href="/compare">Find Products ↗</a>
+</header>
+
+<main class="page-container">
+
+    <section class="page-heading">
+        <span class="section-kicker">YOUR PERSONAL WATCHLIST</span>
+        <h1>Track Your <span>Prices</span></h1>
+        <p>
+            Save products, set your target price, and keep your shopping
+            shortlist organised.
+        </p>
+    </section>
+
+    <section class="tracking-info-grid">
+        <article class="tracking-info-card">
+            <span class="tracking-symbol">♡</span>
+            <h3>Save products</h3>
+            <p>Keep interesting products in one place.</p>
+        </article>
+
+        <article class="tracking-info-card">
+            <span class="tracking-symbol">₹</span>
+            <h3>Set a target</h3>
+            <p>Choose the price you would like to pay.</p>
+        </article>
+
+        <article class="tracking-info-card">
+            <span class="tracking-symbol">↗</span>
+            <h3>Review your list</h3>
+            <p>Revisit your saved products whenever you need.</p>
+        </article>
+    </section>
+
+    <section class="tracking-content">
+
+        <div class="tracking-toolbar">
+            <div>
+                <span class="section-kicker">SAVED PRODUCTS</span>
+                <h2>My watchlist</h2>
+                <p id="trackingCount">0 products saved</p>
+            </div>
+
+            <a href="/compare" class="primary-btn">
+                + Find Products
+            </a>
+        </div>
+
+        <div id="trackingList" class="tracking-list">
+            <div class="empty-state">
+                <span class="empty-icon">♡</span>
+                <h3>Your watchlist is empty</h3>
+                <p>
+                    Visit Compare Prices and add products to start
+                    building your watchlist.
+                </p>
+                <a href="/compare" class="primary-btn">
+                    Explore Products →
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="tracking-note">
+        <span class="tracking-symbol">ⓘ</span>
+        <div>
+            <h3>About price tracking</h3>
+            <p>
+                Your saved products and target prices are stored in this
+                browser. This page does not automatically collect live
+                prices or send notifications. Those features require
+                additional backend functionality.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <a class="brand" href="/">
+        <span class="brand-mark">P</span>
+        Price<span class="brand-accent">Pulse</span>
+    </a>
+
+    <p>Compare smarter. Choose better.</p>
+
+    <div class="footer-bottom">
+        <span>© 2026 PricePulse</span>
+        <div>
+            <a href="/">Home</a>
+            <a href="/compare">Compare</a>
+            <a href="/categories">Categories</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const WATCHLIST_KEY = "pricepulse_watchlist";
+
+    const trackingList = document.getElementById("trackingList");
+    const trackingCount = document.getElementById("trackingCount");
+
+    function getWatchlist() {
+        try {
+            const saved = JSON.parse(
+                localStorage.getItem(WATCHLIST_KEY) || "[]"
+            );
+            return Array.isArray(saved) ? saved : [];
+        } catch {
+            return [];
+        }
+    }
+
+    function saveWatchlist(items) {
+        localStorage.setItem(WATCHLIST_KEY, JSON.stringify(items));
+    }
+
+    function escapeHTML(value) {
+        return String(value ?? "").replace(/[&<>"']/g, char => ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+        })[char]);
+    }
+
+    function renderWatchlist() {
+        const items = getWatchlist();
+
+        trackingCount.textContent =
+            `${items.length} product${items.length === 1 ? "" : "s"} saved`;
+
+        if (items.length === 0) {
+            trackingList.innerHTML = `
+                <div class="empty-state">
+                    <span class="empty-icon">♡</span>
+                    <h3>Your watchlist is empty</h3>
+                    <p>
+                        Visit Compare Prices and add products to start
+                        building your watchlist.
+                    </p>
+                    <a href="/compare" class="primary-btn">
+                        Explore Products →
+                    </a>
+                </div>
+            `;
+            return;
+        }
+
+        trackingList.innerHTML = items.map(item => `
+            <article class="tracking-product">
+                <div class="tracking-product-info">
+                    <span class="tracking-product-icon">▣</span>
+                    <div>
+                        <h3>${escapeHTML(item.name)}</h3>
+                        <p>Current listed price: ${
+                            item.price == null
+                                ? "Not available"
+                                : "₹" + Number(item.price).toLocaleString("en-IN")
+                        }</p>
+                    </div>
+                </div>
+
+                <div class="target-price-control">
+                    <label for="target-${escapeHTML(item.id)}">
+                        Target price (₹)
+                    </label>
+                    <input
+                        type="number"
+                        min="0"
+                        id="target-${escapeHTML(item.id)}"
+                        value="${item.targetPrice ?? ""}"
+                        placeholder="Set target"
+                        class="target-price-input"
+                    >
+                    <button
+                        type="button"
+                        class="save-target-btn"
+                        data-id="${escapeHTML(item.id)}"
+                    >
+                        Save target
+                    </button>
+                </div>
+
+                <button
+                    type="button"
+                    class="remove-tracking-btn"
+                    data-id="${escapeHTML(item.id)}"
+                >
+                    Remove
+                </button>
+            </article>
+        `).join("");
+
+        trackingList.querySelectorAll(".save-target-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const id = button.dataset.id;
+                const input = document.getElementById(`target-${id}`);
+                const value = input.value.trim();
+
+                if (value !== "" && (!Number.isFinite(Number(value)) ||
+                    Number(value) < 0)) {
+                    alert("Enter a valid target price.");
+                    return;
+                }
+
+                const updated = getWatchlist().map(item =>
+                    String(item.id) === id
+                        ? {
+                            ...item,
+                            targetPrice: value === "" ? null : Number(value)
+                        }
+                        : item
+                );
+
+                saveWatchlist(updated);
+                renderWatchlist();
+            });
+        });
+
+        trackingList.querySelectorAll(".remove-tracking-btn")
+            .forEach(button => {
+                button.addEventListener("click", () => {
+                    const updated = getWatchlist().filter(
+                        item => String(item.id) !== button.dataset.id
+                    );
+
+                    saveWatchlist(updated);
+                    renderWatchlist();
+                });
+            });
+    }
+
+    renderWatchlist();
+</script>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
