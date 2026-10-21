@@ -1,123 +1,64 @@
 
 [
-  {
-    "id": 1,
-    "name": "Apple iPhone 11",
-    "brand": "Apple",
-    "model": "iPhone 11",
-    "category": "Mobiles",
-    "variant": "64GB",
-    "image": "📱",
-    "description": "Apple iPhone 11 smartphone, 64GB storage",
-    "prices": [
-      {"platform": "Amazon", "price": 19999, "availability": "Sample offer"},
-      {"platform": "Flipkart", "price": 18999, "availability": "Sample offer"},
-      {"platform": "Croma", "price": 19499, "availability": "Sample offer"}
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Apple iPhone 12",
-    "brand": "Apple",
-    "model": "iPhone 12",
-    "category": "Mobiles",
-    "variant": "64GB",
-    "image": "📱",
-    "description": "Apple iPhone 12 smartphone, 64GB storage",
-    "prices": [
-      {"platform": "Amazon", "price": 24999, "availability": "Sample offer"},
-      {"platform": "Flipkart", "price": 23999, "availability": "Sample offer"},
-      {"platform": "Croma", "price": 24499, "availability": "Sample offer"}
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Apple iPhone 13",
-    "brand": "Apple",
-    "model": "iPhone 13",
-    "category": "Mobiles",
-    "variant": "128GB",
-    "image": "📱",
-    "description": "Apple iPhone 13 smartphone, 128GB storage",
-    "prices": [
-      {"platform": "Amazon", "price": 32999, "availability": "Sample offer"},
-      {"platform": "Flipkart", "price": 31999, "availability": "Sample offer"},
-      {"platform": "Croma", "price": 32499, "availability": "Sample offer"}
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Apple iPhone 14",
-    "brand": "Apple",
-    "model": "iPhone 14",
-    "category": "Mobiles",
-    "variant": "128GB",
-    "image": "📱",
-    "description": "Apple iPhone 14 smartphone, 128GB storage",
-    "prices": [
-      {"platform": "Amazon", "price": 39999, "availability": "Sample offer"},
-      {"platform": "Flipkart", "price": 38999, "availability": "Sample offer"},
-      {"platform": "Croma", "price": 39499, "availability": "Sample offer"}
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Apple iPhone 15",
-    "brand": "Apple",
-    "model": "iPhone 15",
-    "category": "Mobiles",
-    "variant": "128GB",
-    "image": "📱",
-    "description": "Apple iPhone 15 smartphone, 128GB storage",
-    "prices": [
-      {"platform": "Amazon", "price": 69999, "availability": "Sample offer"},
-      {"platform": "Flipkart", "price": 67999, "availability": "Sample offer"},
-      {"platform": "Croma", "price": 68999, "availability": "Sample offer"}
-    ]
-  },
-  {
-    "id": 6,
-    "name": "Samsung Galaxy S24",
-    "brand": "Samsung",
-    "model": "Galaxy S24",
-    "category": "Mobiles",
-    "variant": "128GB",
-    "image": "📱",
-    "description": "Samsung Galaxy S24 smartphone, 128GB storage",
-    "prices": [
-      {"platform": "Amazon", "price": 74999, "availability": "Sample offer"},
-      {"platform": "Flipkart", "price": 72999, "availability": "Sample offer"},
-      {"platform": "Croma", "price": 73999, "availability": "Sample offer"}
-    ]
-  },
-  {
-    "id": 7,
-    "name": "boAt Rockerz 450 Headphones",
-    "brand": "boAt",
-    "model": "Rockerz 450",
-    "category": "Headphones",
-    "variant": "Standard",
-    "image": "🎧",
-    "description": "Wireless Bluetooth headphones with long battery life",
-    "prices": [
-      {"platform": "Amazon", "price": 1599, "availability": "Sample offer"},
-      {"platform": "Flipkart", "price": 1399, "availability": "Sample offer"},
-      {"platform": "Croma", "price": 1549, "availability": "Sample offer"}
-    ]
-  },
-  {
-    "id": 8,
-    "name": "HP Pavilion 15 Laptop",
-    "brand": "HP",
-    "model": "Pavilion 15",
-    "category": "Laptops",
-    "variant": "Standard",
-    "image": "💻",
-    "description": "HP Pavilion 15 laptop",
-    "prices": [
-      {"platform": "Amazon", "price": 64999, "availability": "Sample offer"},
-      {"platform": "Flipkart", "price": 62999, "availability": "Sample offer"},
-      {"platform": "Croma", "price": 63999, "availability": "Sample offer"}
-    ]
-  }
+  {"id":1,"name":"Apple iPhone 11","brand":"Apple","model":"iPhone 11","category":"Mobiles","variant":"64GB","price":18999,"image":"📱","description":"Apple iPhone 11 - 64GB","prices":[{"platform":"Amazon","price":18999},{"platform":"Flipkart","price":18499},{"platform":"Croma","price":19699}]},
+  {"id":2,"name":"Apple iPhone 12","brand":"Apple","model":"iPhone 12","category":"Mobiles","variant":"128GB","price":23999,"image":"📱","description":"Apple iPhone 12 - 128GB","prices":[{"platform":"Amazon","price":23999},{"platform":"Flipkart","price":23499},{"platform":"Croma","price":24699}]},
+  {"id":3,"name":"Apple iPhone 13","brand":"Apple","model":"iPhone 13","category":"Mobiles","variant":"128GB","price":32999,"image":"📱","description":"Apple iPhone 13 - 128GB","prices":[{"platform":"Amazon","price":32999},{"platform":"Flipkart","price":32499},{"platform":"Croma","price":33699}]},
+  {"id":4,"name":"Apple iPhone 14","brand":"Apple","model":"iPhone 14","category":"Mobiles","variant":"128GB","price":45999,"image":"📱","description":"Apple iPhone 14 - 128GB","prices":[{"platform":"Amazon","price":45999},{"platform":"Flipkart","price":45499},{"platform":"Croma","price":46699}]},
+  {"id":5,"name":"Apple iPhone 15","brand":"Apple","model":"iPhone 15","category":"Mobiles","variant":"128GB","price":64999,"image":"📱","description":"Apple iPhone 15 - 128GB","prices":[{"platform":"Amazon","price":64999},{"platform":"Flipkart","price":64499},{"platform":"Croma","price":65699}]},
+  {"id":6,"name":"Apple iPhone 15 Pro","brand":"Apple","model":"iPhone 15 Pro","category":"Mobiles","variant":"256GB","price":109999,"image":"📱","description":"Apple iPhone 15 Pro - 256GB","prices":[{"platform":"Amazon","price":109999},{"platform":"Flipkart","price":109499},{"platform":"Croma","price":110699}]},
+  {"id":7,"name":"Apple iPhone 16","brand":"Apple","model":"iPhone 16","category":"Mobiles","variant":"128GB","price":69999,"image":"📱","description":"Apple iPhone 16 - 128GB","prices":[{"platform":"Amazon","price":69999},{"platform":"Flipkart","price":69499},{"platform":"Croma","price":70699}]},
+
+  {"id":8,"name":"Samsung Galaxy A15","brand":"Samsung","model":"Galaxy A15","category":"Mobiles","variant":"128GB","price":15999,"image":"📱","description":"Samsung Galaxy A15 - 128GB","prices":[{"platform":"Amazon","price":15999},{"platform":"Flipkart","price":15499},{"platform":"Croma","price":16699}]},
+  {"id":9,"name":"Samsung Galaxy A35","brand":"Samsung","model":"Galaxy A35","category":"Mobiles","variant":"128GB","price":27999,"image":"📱","description":"Samsung Galaxy A35 - 128GB","prices":[{"platform":"Amazon","price":27999},{"platform":"Flipkart","price":27499},{"platform":"Croma","price":28699}]},
+  {"id":10,"name":"Samsung Galaxy S23 FE","brand":"Samsung","model":"Galaxy S23 FE","category":"Mobiles","variant":"128GB","price":39999,"image":"📱","description":"Samsung Galaxy S23 FE - 128GB","prices":[{"platform":"Amazon","price":39999},{"platform":"Flipkart","price":39499},{"platform":"Croma","price":40699}]},
+  {"id":11,"name":"Samsung Galaxy S24","brand":"Samsung","model":"Galaxy S24","category":"Mobiles","variant":"256GB","price":59999,"image":"📱","description":"Samsung Galaxy S24 - 256GB","prices":[{"platform":"Amazon","price":59999},{"platform":"Flipkart","price":59499},{"platform":"Croma","price":60699}]},
+  {"id":12,"name":"Samsung Galaxy S24 Ultra","brand":"Samsung","model":"Galaxy S24 Ultra","category":"Mobiles","variant":"256GB","price":109999,"image":"📱","description":"Samsung Galaxy S24 Ultra - 256GB","prices":[{"platform":"Amazon","price":109999},{"platform":"Flipkart","price":109499},{"platform":"Croma","price":110699}]},
+
+  {"id":13,"name":"OnePlus Nord CE4","brand":"OnePlus","model":"Nord CE4","category":"Mobiles","variant":"128GB","price":24999,"image":"📱","description":"OnePlus Nord CE4 - 128GB","prices":[{"platform":"Amazon","price":24999},{"platform":"Flipkart","price":24499},{"platform":"Croma","price":25699}]},
+  {"id":14,"name":"OnePlus Nord 4","brand":"OnePlus","model":"Nord 4","category":"Mobiles","variant":"256GB","price":29999,"image":"📱","description":"OnePlus Nord 4 - 256GB","prices":[{"platform":"Amazon","price":29999},{"platform":"Flipkart","price":29499},{"platform":"Croma","price":30699}]},
+  {"id":15,"name":"OnePlus 12R","brand":"OnePlus","model":"12R","category":"Mobiles","variant":"256GB","price":39999,"image":"📱","description":"OnePlus 12R - 256GB","prices":[{"platform":"Amazon","price":39999},{"platform":"Flipkart","price":39499},{"platform":"Croma","price":40699}]},
+  {"id":16,"name":"OnePlus 12","brand":"OnePlus","model":"12","category":"Mobiles","variant":"256GB","price":64999,"image":"📱","description":"OnePlus 12 - 256GB","prices":[{"platform":"Amazon","price":64999},{"platform":"Flipkart","price":64499},{"platform":"Croma","price":65699}]},
+
+  {"id":17,"name":"Xiaomi Redmi Note 13","brand":"Xiaomi","model":"Redmi Note 13","category":"Mobiles","variant":"128GB","price":14999,"image":"📱","description":"Xiaomi Redmi Note 13 - 128GB","prices":[{"platform":"Amazon","price":14999},{"platform":"Flipkart","price":14499},{"platform":"Croma","price":15699}]},
+  {"id":18,"name":"Xiaomi Redmi Note 13 Pro","brand":"Xiaomi","model":"Redmi Note 13 Pro","category":"Mobiles","variant":"256GB","price":24999,"image":"📱","description":"Xiaomi Redmi Note 13 Pro - 256GB","prices":[{"platform":"Amazon","price":24999},{"platform":"Flipkart","price":24499},{"platform":"Croma","price":25699}]},
+  {"id":19,"name":"Xiaomi Redmi Note 13 Pro+","brand":"Xiaomi","model":"Redmi Note 13 Pro+","category":"Mobiles","variant":"256GB","price":31999,"image":"📱","description":"Xiaomi Redmi Note 13 Pro+ - 256GB","prices":[{"platform":"Amazon","price":31999},{"platform":"Flipkart","price":31499},{"platform":"Croma","price":32699}]},
+  {"id":20,"name":"Motorola Edge 50 Fusion","brand":"Motorola","model":"Edge 50 Fusion","category":"Mobiles","variant":"128GB","price":22999,"image":"📱","description":"Motorola Edge 50 Fusion - 128GB","prices":[{"platform":"Amazon","price":22999},{"platform":"Flipkart","price":22499},{"platform":"Croma","price":23699}]},
+  {"id":21,"name":"Motorola Moto G85","brand":"Motorola","model":"Moto G85","category":"Mobiles","variant":"128GB","price":17999,"image":"📱","description":"Motorola Moto G85 - 128GB","prices":[{"platform":"Amazon","price":17999},{"platform":"Flipkart","price":17499},{"platform":"Croma","price":18699}]},
+  {"id":22,"name":"Realme Narzo 70 Pro","brand":"Realme","model":"Narzo 70 Pro","category":"Mobiles","variant":"128GB","price":19999,"image":"📱","description":"Realme Narzo 70 Pro - 128GB","prices":[{"platform":"Amazon","price":19999},{"platform":"Flipkart","price":19499},{"platform":"Croma","price":20699}]},
+  {"id":23,"name":"Realme 12 Pro+","brand":"Realme","model":"12 Pro+","category":"Mobiles","variant":"256GB","price":29999,"image":"📱","description":"Realme 12 Pro+ - 256GB","prices":[{"platform":"Amazon","price":29999},{"platform":"Flipkart","price":29499},{"platform":"Croma","price":30699}]},
+  {"id":24,"name":"Google Pixel 8a","brand":"Google","model":"Pixel 8a","category":"Mobiles","variant":"128GB","price":52999,"image":"📱","description":"Google Pixel 8a - 128GB","prices":[{"platform":"Amazon","price":52999},{"platform":"Flipkart","price":52499},{"platform":"Croma","price":53699}]},
+
+  {"id":25,"name":"HP Pavilion 15","brand":"HP","model":"Pavilion 15","category":"Laptops","variant":"16GB RAM 512GB SSD","price":62999,"image":"💻","description":"HP Pavilion 15 - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":62999},{"platform":"Flipkart","price":62499},{"platform":"Croma","price":63699}]},
+  {"id":26,"name":"HP Victus 15","brand":"HP","model":"Victus 15","category":"Laptops","variant":"16GB RAM 512GB SSD","price":74999,"image":"💻","description":"HP Victus 15 - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":74999},{"platform":"Flipkart","price":74499},{"platform":"Croma","price":75699}]},
+  {"id":27,"name":"Dell Inspiron 15","brand":"Dell","model":"Inspiron 15","category":"Laptops","variant":"16GB RAM 512GB SSD","price":58999,"image":"💻","description":"Dell Inspiron 15 - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":58999},{"platform":"Flipkart","price":58499},{"platform":"Croma","price":59699}]},
+  {"id":28,"name":"Dell G15 Gaming","brand":"Dell","model":"G15 Gaming","category":"Laptops","variant":"16GB RAM 512GB SSD","price":89999,"image":"💻","description":"Dell G15 Gaming - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":89999},{"platform":"Flipkart","price":89499},{"platform":"Croma","price":90699}]},
+  {"id":29,"name":"Lenovo IdeaPad Slim 3","brand":"Lenovo","model":"IdeaPad Slim 3","category":"Laptops","variant":"8GB RAM 512GB SSD","price":42999,"image":"💻","description":"Lenovo IdeaPad Slim 3 - 8GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":42999},{"platform":"Flipkart","price":42499},{"platform":"Croma","price":43699}]},
+  {"id":30,"name":"Lenovo LOQ 15","brand":"Lenovo","model":"LOQ 15","category":"Laptops","variant":"16GB RAM 512GB SSD","price":79999,"image":"💻","description":"Lenovo LOQ 15 - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":79999},{"platform":"Flipkart","price":79499},{"platform":"Croma","price":80699}]},
+  {"id":31,"name":"ASUS Vivobook 15","brand":"ASUS","model":"Vivobook 15","category":"Laptops","variant":"16GB RAM 512GB SSD","price":55999,"image":"💻","description":"ASUS Vivobook 15 - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":55999},{"platform":"Flipkart","price":55499},{"platform":"Croma","price":56699}]},
+  {"id":32,"name":"ASUS TUF Gaming F15","brand":"ASUS","model":"TUF Gaming F15","category":"Laptops","variant":"16GB RAM 512GB SSD","price":84999,"image":"💻","description":"ASUS TUF Gaming F15 - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":84999},{"platform":"Flipkart","price":84499},{"platform":"Croma","price":85699}]},
+  {"id":33,"name":"Acer Aspire 5","brand":"Acer","model":"Aspire 5","category":"Laptops","variant":"16GB RAM 512GB SSD","price":49999,"image":"💻","description":"Acer Aspire 5 - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":49999},{"platform":"Flipkart","price":49499},{"platform":"Croma","price":50699}]},
+  {"id":34,"name":"Apple MacBook Air M2","brand":"Apple","model":"MacBook Air M2","category":"Laptops","variant":"8GB RAM 256GB SSD","price":79990,"image":"💻","description":"Apple MacBook Air M2 - 8GB RAM 256GB SSD","prices":[{"platform":"Amazon","price":79990},{"platform":"Flipkart","price":79490},{"platform":"Croma","price":80690}]},
+  {"id":35,"name":"Apple MacBook Air M3","brand":"Apple","model":"MacBook Air M3","category":"Laptops","variant":"16GB RAM 512GB SSD","price":124900,"image":"💻","description":"Apple MacBook Air M3 - 16GB RAM 512GB SSD","prices":[{"platform":"Amazon","price":124900},{"platform":"Flipkart","price":124400},{"platform":"Croma","price":125600}]},
+
+  {"id":36,"name":"Boat Rockerz 450","brand":"Boat","model":"Rockerz 450","category":"Headphones","variant":"Wireless","price":1499,"image":"🎧","description":"Boat Rockerz 450 - Wireless","prices":[{"platform":"Amazon","price":1499},{"platform":"Flipkart","price":999},{"platform":"Croma","price":2199}]},
+  {"id":37,"name":"Boat Rockerz 550","brand":"Boat","model":"Rockerz 550","category":"Headphones","variant":"Wireless","price":1999,"image":"🎧","description":"Boat Rockerz 550 - Wireless","prices":[{"platform":"Amazon","price":1999},{"platform":"Flipkart","price":1499},{"platform":"Croma","price":2699}]},
+  {"id":38,"name":"JBL Tune 510BT","brand":"JBL","model":"Tune 510BT","category":"Headphones","variant":"Wireless","price":2499,"image":"🎧","description":"JBL Tune 510BT - Wireless","prices":[{"platform":"Amazon","price":2499},{"platform":"Flipkart","price":1999},{"platform":"Croma","price":3199}]},
+  {"id":39,"name":"JBL Tune 760NC","brand":"JBL","model":"Tune 760NC","category":"Headphones","variant":"Wireless Noise Cancelling","price":4999,"image":"🎧","description":"JBL Tune 760NC - Wireless Noise Cancelling","prices":[{"platform":"Amazon","price":4999},{"platform":"Flipkart","price":4499},{"platform":"Croma","price":5699}]},
+  {"id":40,"name":"Sony WH-CH520","brand":"Sony","model":"WH-CH520","category":"Headphones","variant":"Wireless","price":4490,"image":"🎧","description":"Sony WH-CH520 - Wireless","prices":[{"platform":"Amazon","price":4490},{"platform":"Flipkart","price":3990},{"platform":"Croma","price":5190}]},
+  {"id":41,"name":"Sony WH-CH720N","brand":"Sony","model":"WH-CH720N","category":"Headphones","variant":"Wireless Noise Cancelling","price":7990,"image":"🎧","description":"Sony WH-CH720N - Wireless Noise Cancelling","prices":[{"platform":"Amazon","price":7990},{"platform":"Flipkart","price":7490},{"platform":"Croma","price":8690}]},
+  {"id":42,"name":"Sony WH-1000XM5","brand":"Sony","model":"WH-1000XM5","category":"Headphones","variant":"Wireless Noise Cancelling","price":24990,"image":"🎧","description":"Sony WH-1000XM5 - Wireless Noise Cancelling","prices":[{"platform":"Amazon","price":24990},{"platform":"Flipkart","price":24490},{"platform":"Croma","price":25690}]},
+  {"id":43,"name":"Sennheiser HD 450BT","brand":"Sennheiser","model":"HD 450BT","category":"Headphones","variant":"Wireless Noise Cancelling","price":8990,"image":"🎧","description":"Sennheiser HD 450BT - Wireless Noise Cancelling","prices":[{"platform":"Amazon","price":8990},{"platform":"Flipkart","price":8490},{"platform":"Croma","price":9690}]},
+  {"id":44,"name":"boAt Nirvana 751 ANC","brand":"boAt","model":"Nirvana 751 ANC","category":"Headphones","variant":"Wireless Noise Cancelling","price":3999,"image":"🎧","description":"boAt Nirvana 751 ANC - Wireless Noise Cancelling","prices":[{"platform":"Amazon","price":3999},{"platform":"Flipkart","price":3499},{"platform":"Croma","price":4699}]},
+  {"id":45,"name":"Skullcandy Hesh Evo","brand":"Skullcandy","model":"Hesh Evo","category":"Headphones","variant":"Wireless","price":6999,"image":"🎧","description":"Skullcandy Hesh Evo - Wireless","prices":[{"platform":"Amazon","price":6999},{"platform":"Flipkart","price":6499},{"platform":"Croma","price":7699}]},
+
+  {"id":46,"name":"Samsung Crystal 4K Smart TV","brand":"Samsung","model":"Crystal 4K Smart TV","category":"Televisions","variant":"43 inch","price":32999,"image":"📺","description":"Samsung Crystal 4K Smart TV - 43 inch","prices":[{"platform":"Amazon","price":32999},{"platform":"Flipkart","price":32499},{"platform":"Croma","price":33699}]},
+  {"id":47,"name":"Samsung QLED Q60C","brand":"Samsung","model":"QLED Q60C","category":"Televisions","variant":"55 inch","price":59999,"image":"📺","description":"Samsung QLED Q60C - 55 inch","prices":[{"platform":"Amazon","price":59999},{"platform":"Flipkart","price":59499},{"platform":"Croma","price":60699}]},
+  {"id":48,"name":"LG UQ75 4K Smart TV","brand":"LG","model":"UQ75 4K Smart TV","category":"Televisions","variant":"43 inch","price":29999,"image":"📺","description":"LG UQ75 4K Smart TV - 43 inch","prices":[{"platform":"Amazon","price":29999},{"platform":"Flipkart","price":29499},{"platform":"Croma","price":30699}]},
+  {"id":49,"name":"LG UR80 4K Smart TV","brand":"LG","model":"UR80 4K Smart TV","category":"Televisions","variant":"55 inch","price":44999,"image":"📺","description":"LG UR80 4K Smart TV - 55 inch","prices":[{"platform":"Amazon","price":44999},{"platform":"Flipkart","price":44499},{"platform":"Croma","price":45699}]},
+  {"id":50,"name":"Sony Bravia X74L","brand":"Sony","model":"Bravia X74L","category":"Televisions","variant":"43 inch 4K","price":39999,"image":"📺","description":"Sony Bravia X74L - 43 inch 4K","prices":[{"platform":"Amazon","price":39999},{"platform":"Flipkart","price":39499},{"platform":"Croma","price":40699}]},
+  {"id":51,"name":"Sony Bravia X82L","brand":"Sony","model":"Bravia X82L","category":"Televisions","variant":"55 inch 4K","price":69999,"image":"📺","description":"Sony Bravia X82L - 55 inch 4K","prices":[{"platform":"Amazon","price":69999},{"platform":"Flipkart","price":69499},{"platform":"Croma","price":70699}]},
+  {"id":52,"name":"Xiaomi Smart TV X Pro","brand":"Xiaomi","model":"Smart TV X Pro","category":"Televisions","variant":"43 inch 4K","price":27999,"image":"📺","description":"Xiaomi Smart TV X Pro - 43 inch 4K","prices":[{"platform":"Amazon","price":27999},{"platform":"Flipkart","price":27499},{"platform":"Croma","price":28699}]},
+  {"id":53,"name":"TCL C645 QLED TV","brand":"TCL","model":"C645 QLED TV","category":"Televisions","variant":"55 inch","price":42999,"image":"📺","description":"TCL C645 QLED TV - 55 inch","prices":[{"platform":"Amazon","price":42999},{"platform":"Flipkart","price":42499},{"platform":"Croma","price":43699}]},
+  {"id":54,"name":"Hisense A6K 4K Smart TV","brand":"Hisense","model":"A6K 4K Smart TV","category":"Televisions","variant":"55 inch","price":38999,"image":"📺","description":"Hisense A6K 4K Smart TV - 55 inch","prices":[{"platform":"Amazon","price":38999},{"platform":"Flipkart","price":38499},{"platform":"Croma","price":39699}]},
+  {"id":55,"name":"Toshiba C350 4K Smart TV","brand":"Toshiba","model":"C350 4K Smart TV","category":"Televisions","variant":"50 inch","price":35999,"image":"📺","description":"Toshiba C350 4K Smart TV - 50 inch","prices":[{"platform":"Amazon","price":35999},{"platform":"Flipkart","price":35499},{"platform":"Croma","price":36699}]}
 ]

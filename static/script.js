@@ -219,6 +219,7 @@ function renderProducts(products, containerId = "compareResults") {
    SEARCH
 ========================================== */
 
+
 async function searchProducts(query) {
     const cleanedQuery = query.trim();
 
@@ -228,12 +229,20 @@ async function searchProducts(query) {
         return;
     }
 
+    // Clear previous filters so they don't block new searches.
+    if ($("categoryFilter")) $("categoryFilter").value = "";
+    if ($("brandFilter")) $("brandFilter").value = "";
+    if ($("maxPriceFilter")) $("maxPriceFilter").value = "";
+    if ($("ratingFilter")) $("ratingFilter").value = "0";
+
     try {
         const response = await fetch(
             `/search?q=${encodeURIComponent(cleanedQuery)}`
         );
 
-        if (!response.ok) throw new Error("Search request failed.");
+        if (!response.ok) {
+            throw new Error("Search request failed.");
+        }
 
         const data = await response.json();
 
@@ -248,6 +257,20 @@ async function searchProducts(query) {
 
     } catch (error) {
         console.error("Search error:", error);
+
+        const queryLower = cleanedQuery.toLowerCase();
+
+        visibleProducts = allProducts.filter(product =>
+            getProductName(product).toLowerCase().includes(queryLower) ||
+            getProductBrand(product).toLowerCase().includes(queryLower) ||
+            String(product.model ?? "").toLowerCase().includes(queryLower) ||
+            getProductCategory(product).toLowerCase().includes(queryLower)
+        );
+
+        runFilters();
+    }
+}
+
 
         // Local fallback if the search endpoint is temporarily unavailable.
         const queryLower = cleanedQuery.toLowerCase();
